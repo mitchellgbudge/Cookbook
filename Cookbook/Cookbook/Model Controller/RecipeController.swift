@@ -12,7 +12,7 @@ class RecipeController {
     
     // MARK: - Methods
     
-    func createRecipe(title: String, cuisine: String, directions: String) -> Recipe {
+    @discardableResult func createRecipe(title: String, cuisine: String, directions: String) -> Recipe {
         let recipe = Recipe(title: title, cuisine: cuisine, directions: directions, context: CoreDataStack.shared.mainContext)
         CoreDataStack.shared.saveToPersistentStore()
         return recipe

@@ -10,21 +10,53 @@ import UIKit
 
 class AddRecipeViewController: UIViewController {
 
+    //MARK: - Properties & Outlets
+    
+    @IBOutlet weak var titleTextField: UITextField!
+    @IBOutlet weak var pickerView: UIPickerView!
+    @IBOutlet weak var directionsTextView: UITextView!
+    
+    var pickerData: [String] = []
+    var pickerSelection: String?
+    var recipeController: RecipeController?
+    
+    //MARK: - Methods
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        pickerView.dataSource = self
+        pickerView.delegate = self
+        pickerData = ["Thai", "Italian", "Mexican", "Japanese", "Chinese", "American", "Greek"]
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func saveButtonPressed(_ sender: Any) {
+        guard let title = titleTextField.text,
+            !title.isEmpty,
+            let cuisine = pickerSelection,
+            let directions = directionsTextView.text,
+            !directions.isEmpty else { return }
+        recipeController?.createRecipe(title: title, cuisine: cuisine, directions: directions)
+        navigationController?.popViewController(animated: true)
     }
-    */
 
+}
+
+extension AddRecipeViewController: UIPickerViewDelegate, UIPickerViewDataSource {
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return pickerData.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return pickerData[row]
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        pickerSelection = pickerData[row]
+    }
+    
 }

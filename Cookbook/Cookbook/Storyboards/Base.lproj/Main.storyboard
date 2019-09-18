@@ -128,8 +128,17 @@ Ingredients:</string>
                         <viewLayoutGuide key="safeArea" id="lV4-vT-qQd"/>
                     </view>
                     <navigationItem key="navigationItem" title="Create Recipe" id="i29-BT-hDq">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="9Qi-uP-Pyq"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="9Qi-uP-Pyq">
+                            <connections>
+                                <action selector="saveButtonPressed:" destination="TrU-U0-kpx" id="BfW-en-1cs"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="directionsTextView" destination="REH-nc-f7n" id="rtj-Oj-GMs"/>
+                        <outlet property="pickerView" destination="bUv-B3-D0j" id="Pkd-vq-7Iu"/>
+                        <outlet property="titleTextField" destination="MOh-lw-KvG" id="P1A-1t-VNj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rVa-F2-vSc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
