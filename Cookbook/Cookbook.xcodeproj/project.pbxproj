@@ -16,6 +16,7 @@
 		3D1592F02331B2A8002DE7A8 /* Cookbook.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3D1592EE2331B2A8002DE7A8 /* Cookbook.xcdatamodeld */; };
 		3D1592F22331B3CA002DE7A8 /* Recipe+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D1592F12331B3CA002DE7A8 /* Recipe+Convenience.swift */; };
 		3D1592F82331B590002DE7A8 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D1592F72331B590002DE7A8 /* CoreDataStack.swift */; };
+		3D1592FA2331B666002DE7A8 /* RecipeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D1592F92331B666002DE7A8 /* RecipeController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		3D1592EF2331B2A8002DE7A8 /* Cookbook.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Cookbook.xcdatamodel; sourceTree = "<group>"; };
 		3D1592F12331B3CA002DE7A8 /* Recipe+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Recipe+Convenience.swift"; sourceTree = "<group>"; };
 		3D1592F72331B590002DE7A8 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		3D1592F92331B666002DE7A8 /* RecipeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				3D1592ED2331B214002DE7A8 /* Resources */,
 				3D1592EB2331B1DA002DE7A8 /* View Controllers */,
 				3D1592F32331B548002DE7A8 /* Model */,
+				3D1592FB2331B66B002DE7A8 /* Model Controller */,
 			);
 			path = Cookbook;
 			sourceTree = "<group>";
@@ -114,6 +117,14 @@
 				3D1592F72331B590002DE7A8 /* CoreDataStack.swift */,
 			);
 			path = "Core Data";
+			sourceTree = "<group>";
+		};
+		3D1592FB2331B66B002DE7A8 /* Model Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3D1592F92331B666002DE7A8 /* RecipeController.swift */,
+			);
+			path = "Model Controller";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -189,6 +200,7 @@
 			files = (
 				3D1592F22331B3CA002DE7A8 /* Recipe+Convenience.swift in Sources */,
 				3D1592F02331B2A8002DE7A8 /* Cookbook.xcdatamodeld in Sources */,
+				3D1592FA2331B666002DE7A8 /* RecipeController.swift in Sources */,
 				3D1592EA2331B18E002DE7A8 /* AddRecipeViewController.swift in Sources */,
 				3D1592F82331B590002DE7A8 /* CoreDataStack.swift in Sources */,
 				3D1592E82331B17D002DE7A8 /* RecipesTableViewController.swift in Sources */,
